@@ -123,7 +123,7 @@ void loop() {
     }
     if (HC12ReadBuffer.startsWith("GPS")) {
       GPS.listen();
-      HC12.print("Remote GPS Command Received");
+      HC12.println("Remote GPS Command Received");
       Serial.println("Switched to GPS listen mode...");
       GPSLocal = false;
       delay(2000);  // Give GPS time to send a sentence
